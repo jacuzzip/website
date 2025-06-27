@@ -1,4 +1,4 @@
-<div id="bg-image">
+<!-- <div id="bg-image">
 	<img src="images/image2.jpeg"
 		 alt="Background Image">
 </div>
@@ -95,4 +95,139 @@
 			--outer-margin: 1.5rem;
 		}
 	}
-</style>
+</style> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle's Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .image-column {
+            order: 1;
+        }
+
+        .image-column img {
+            width: 75%;
+            max-width: 28rem;
+            height: auto;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+
+        .text-column {
+            order: 2;
+        }
+
+        .text-column p {
+            font-size: 1rem;
+            color: #000000;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-container {
+            padding-top: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .icon-link:hover {
+            opacity: 0.75;
+        }
+
+        .icon-link img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        /* Large screens (desktop) */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 4rem 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+
+            .image-column {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .image-column img {
+                width: 75%;
+                margin-left: auto;
+            }
+        }
+
+        /* Medium screens */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .container {
+                padding: 4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="grid">
+                <!-- Image Column -->
+                <div class="image-column">
+                    <img src="images/image2.jpeg" alt="Featured image">
+                </div>
+
+                <!-- Text Column -->
+                <div class="text-column">
+                    <p>
+                        hi! i'm michelle.<br>
+                        site coming soon :)
+                    </p>
+                    <div class="link-container">
+                        <a href="https://www.instagram.com/mhuang12892/" target="_blank" rel="noopener noreferrer" class="icon-link">
+                            <img src="images/instagram-logo-svgrepo-com.svg" alt=Instagram Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
